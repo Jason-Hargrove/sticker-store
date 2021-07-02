@@ -18,11 +18,12 @@ class Index extends React.Component {
                   The <a href={`/stickers/${sticker._id}`}>{sticker.name}</a>
                   {' '}is {sticker.color} <br/>
                   {
-                    sticker.readyToEat?
+                    sticker.protectiveCoating?
                     '  Protective Coating Applied':
                     '  No Protective Coating'
                   }
-                  <form method="POST" action={`/stickers/${sticker._id}?_method=DELETE`}>
+                  <form method="POST" action={`/stickers/
+                  ${sticker._id}?_method=DELETE`}>
                   <input type="submit" value="DELETE"/>
                   </form>
                   <a href={`/stickers/${sticker._id}/edit`}>Edit This Sticker</a>

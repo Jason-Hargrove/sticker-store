@@ -30,10 +30,3 @@ app.use('/stickers', require('./controllers/routeController'));
 app.listen(PORT, () => {
   console.log('We\'re listening on PORT', PORT)
 })
-
-
-// ++++++++++++++++++++++++++++++++++++++++++++
-  // w10d03 in lecture materials.
-  // check .json but I believe I've stopped at
-  // connect "MongoDB Database with Mongoose and MongoDB Atlas" in personal notes.
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
