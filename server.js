@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 // ===== Setup Data =====
 const db = require('./models/db');
 db.once('connected', () => {
-  console.log('Connected to Mongo')
+  console.log('Connected to MongoDB')
 });
 
 // ===== Middleware ======
@@ -28,5 +28,12 @@ app.use(express.static('public'));
 app.use('/stickers', require('./controllers/routeController'));
 
 app.listen(PORT, () => {
-  console.log('We\'re listening on', PORT)
+  console.log('We\'re listening on PORT', PORT)
 })
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++
+  // w10d03 in lecture materials.
+  // check .json but I believe I've stopped at
+  // connect "MongoDB Database with Mongoose and MongoDB Atlas" in personal notes.
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
