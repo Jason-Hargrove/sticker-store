@@ -16,12 +16,15 @@ class Index extends React.Component {
               return (
                 <li key={sticker._id}>
                   The <a href={`/stickers/${sticker._id}`}>{sticker.name}</a>
-                  {' '}is {sticker.color} <br/>
+                  {' '}is {sticker.description} <br/>
+                  {' '}is {sticker.price} <br/>
+                  {' '}is {sticker.countInStock} <br/>
                   {
                     sticker.protectiveCoating?
                     '  Protective Coating Applied':
                     '  No Protective Coating'
                   }
+                  {' '}is {sticker.imageUrl} <br/>
                   <form method="POST" action={`/stickers/
                   ${sticker._id}?_method=DELETE`}>
                   <input type="submit" value="DELETE"/>

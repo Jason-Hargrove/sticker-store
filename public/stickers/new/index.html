@@ -10,12 +10,12 @@
   <h1>Make a New Sticker page</h1>
   <!-- Note: action will be the route, method will be the HTTP verb -->
   <form action="/stickers" method="POST">
-    Name: <input type="string" name="name" /><br />
-    Description: <input type="string" name="description" /><br />
+    Name: <input type="text" name="name" /><br />
+    Description: <input type="text" name="description" /><br />
     Price: <input type="number" name="price" /><br />
     Count In Stock: <input type="number" name="countInStock" /><br />
     Protective Coating: <input type="checkbox" name="protectiveCoating" /><br />
-    Image: <input type="string" name="imageUrl" /><br />
+    Image: <input type="text" name="imageUrl" /><br />
     <input type="submit" name="" value="Create Sticker" />
   </form>
 </body>
