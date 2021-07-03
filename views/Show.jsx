@@ -10,10 +10,15 @@ class Show extends React.Component {
       <DefaultLayout title={`${sticker.name.toUpperCase()} Show Page`}>
       {/* a comment in jsx */}
         <h1>Show Page</h1>
-        The {sticker.name} is {sticker.color}
+        Name {sticker.name}
+        Description {sticker.descripton}
+        Price {sticker.price}
+        Count in Stock {sticker.countInStock}
+        Protective Coating
         {sticker.protectiveCoating?
           ' Protective Coating Applied':
           ' No Protective Coating'}
+        Image {sticker.imageUrl}
       </DefaultLayout>
     )
   }

@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Stickers New Page</title>
-  </head>
-  <body>
-    <h1>Make a New Sticker page</h1>
-           {/* NOTE: action will be the route, method will be the HTTP verb */}
-           <form action="/stickers" method="POST">
-             Name: <input type="text" name="name" /><br/>
-             Color: <input type="text" name="color" /><br/>
-             Protective Coating: <input type="checkbox" name="protectiveCoating" /><br/>
-             <input type="submit" name="" value="Create Sticker"/>
-           </form>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Stickers New Page</title>
+</head>
+
+<body>
+  <h1>Make a New Sticker page</h1>
+  <!-- Note: action will be the route, method will be the HTTP verb -->
+  <form action="/stickers" method="POST">
+    Name: <input type="string" name="name" /><br />
+    Description: <input type="string" name="description" /><br />
+    Price: <input type="number" name="price" /><br />
+    Count In Stock: <input type="number" name="countInStock" /><br />
+    Protective Coating: <input type="checkbox" name="protectiveCoating" /><br />
+    Image: <input type="string" name="imageUrl" /><br />
+    <input type="submit" name="" value="Create Sticker" />
+  </form>
+</body>
+
 </html>
