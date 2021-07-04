@@ -30,13 +30,12 @@ class DefaultLayout extends React.Component {
 
             <h1>{this.props.title}</h1>
             {this.props.children}
-            
+
           </body>
 
       </html>
     )
   }
 }
-
 
 module.exports = DefaultLayout;
