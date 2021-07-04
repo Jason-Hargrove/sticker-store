@@ -29,4 +29,4 @@ app.use('/stickers', require('./controllers/routeController'));
 
 app.listen(PORT, () => {
   console.log('We\'re listening on PORT', PORT)
-})
+});
