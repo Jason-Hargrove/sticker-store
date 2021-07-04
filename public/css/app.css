@@ -1,3 +1,23 @@
-body {
-  background-color: red;
+/* ===== Global Styles ===== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: "Gill Sans", sans-serif;
+  background-color: rgba(255, 255, 204, 1);
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Colors to copy and paste:
+Yellow background: rgba(255, 255, 204, 1);
+Yellow: rgba(255, 255, 126, 1);
+Purple: rgba(154, 18, 179, 1);
+White: rgba(255,255,255, 1);
+For box shadow: rgba(0,0,0, 0.4); */

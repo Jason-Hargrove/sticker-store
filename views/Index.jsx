@@ -19,7 +19,7 @@ class Index extends React.Component {
 
                   <div className="products__image">
                     <a href={`/stickers/${sticker._id}`}>
-                      <img src={`${sticker.image}`} />
+                      <img src={`${sticker.imageUrl}`} />
                     </a>
                   </div>
 

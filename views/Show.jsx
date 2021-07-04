@@ -12,9 +12,7 @@ class Show extends React.Component {
                 <div className="products__box" key={sticker._id}>
 
                   <div className="products__image">
-                    <a href={`/stickers/${sticker._id}`}>
-                      <img src={`${sticker.image}`} />
-                    </a>
+                      <img src={`${sticker.imageUrl}`} />
                   </div>
 
                   <div className="product__info">
@@ -29,18 +27,18 @@ class Show extends React.Component {
                         {sticker.description}
                       </div>
 
-                    <label className="product__detials">Price:</label>
-                      <div>
+                    <label>Price:</label>
+                      <div className="product__detials">
                         {sticker.price}
                       </div>
 
-                    <label className="product__detials">In Stock:</label>
-                      <div>
+                    <label>In Stock:</label>
+                      <div className="product__detials">
                         {sticker.countInStock}
                       </div>
 
-                    <label className="product__detials">Protective Coating:</label>
-                      <div>
+                    <label>Protective Coating:</label>
+                      <div className="product__detials">
                         {
                           sticker.protectiveCoating?
                           '  Protective Coating Applied':
@@ -66,7 +64,7 @@ class Show extends React.Component {
 
                 </div>
 
-          <a href="/stickers/">Back to the Gallery</a>
+          <a href={`/stickers/`}>Back to the Gallery</a>
 
       </DefaultLayout>
     )

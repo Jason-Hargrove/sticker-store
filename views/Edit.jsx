@@ -9,12 +9,12 @@ class Edit extends React.Component {
     return(
       <DefaultLayout title="Edit Page">
 
-        <div className="products__box" id="form">
+        <div className="products__box">
 
           <form method="POST" action={`/stickers/${this.props.sticker._id}?_method=PUT`}>
 
             <lable>Image:</lable>
-            <input type="text" name="imageUrl" defaultValue={this.props.sticker.image} />
+            <input type="text" name="imageUrl" defaultValue={this.props.sticker.imageUrl} />
 
             <lable>Name:</lable>
             <input type="text" name="name" defaultValue={this.props.sticker.name} />
