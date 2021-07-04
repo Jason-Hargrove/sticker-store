@@ -30,23 +30,23 @@ class Index extends React.Component {
                         {sticker.name}
                       </div>
 
-                    <label className="product__detials">Description:</label>
+                    <label>Description:</label>
                       <div className="product__detials">
                         {sticker.description}
                       </div>
 
-                    <label className="product__detials">Price:</label>
-                      <div>
+                    <label>Price:</label>
+                      <div className="product__detials">
                         {sticker.price}
                       </div>
 
-                    <label className="product__detials">In Stock:</label>
-                      <div>
+                    <label>In Stock:</label>
+                      <div className="product__detials">
                         {sticker.countInStock}
                       </div>
 
-                    <label className="product__detials">Protective Coating:</label>
-                      <div>
+                    <label>Protective Coating:</label>
+                      <div className="product__detials">
                         {
                           sticker.protectiveCoating?
                           '  Protective Coating Applied':
