@@ -34,7 +34,7 @@ class Edit extends React.Component {
               : <input type="checkbox" name="protectiveCoating"/>
             }
 
-            <button type="submit" name="" value="Save Changes">
+            <button type="submit" name=" " value="Save Changes">
               Make a Change
             </button>
 

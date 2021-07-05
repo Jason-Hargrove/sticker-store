@@ -25,27 +25,29 @@ class Index extends React.Component {
 
                   <div className="product__info">
 
-                    <label>Name:</label>
-                      <div className="product__detials">
+                      {/* Product Name */}
+                      <div className="product__name">
                         {sticker.name}
                       </div>
 
-                    <label>Description:</label>
+                      {/* Product Description */}
                       <div className="product__detials">
                         {sticker.description}
                       </div>
 
-                    <label>Price:</label>
-                      <div className="product__detials">
-                        {sticker.price}
+                      {/* Product Price */}
+
+                      <div className="product__price">
+                        <label>$</label>{sticker.price}.00
                       </div>
 
-                    <label>In Stock:</label>
-                      <div className="product__detials">
-                        {sticker.countInStock}
+                      {/* Product Count In Stock */}
+                      <div className="product__stock">
+                        <label>In Stock:</label>
+                        <span className="product__count">{sticker.countInStock}</span>
                       </div>
 
-                    <label>Protective Coating:</label>
+                      {/* Product Protectiv Coating or Not */}
                       <div className="product__detials">
                         {
                           sticker.protectiveCoating?
