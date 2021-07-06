@@ -28,6 +28,13 @@ class Show extends React.Component {
     return (
       <DefaultLayout title={"Is This Your Sticker?"}>
 
+      <head>
+        <meta charSet="utf-8" />
+        <title>{this.props.title}</title>
+        <link rel="stylesheet" href="/css/show.css" />
+      </head>
+
+
                 <div className="products__box" key={sticker._id}>
 
                   <div className="products__image">

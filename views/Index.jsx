@@ -9,7 +9,7 @@ class Index extends React.Component {
 
     return (
       <DefaultLayout title={"Radioactive Stickers"}>
-
+      
         <div className="products">
           {
             stickers.map((sticker, i) => {
@@ -62,7 +62,7 @@ class Index extends React.Component {
           }
         </div>
         <nav>
-          <a href="/stickers/new">Add a Sticker</a>
+          <a href="/stickers/new"><h3>Add a Sticker</h3></a>
         </nav>
       </DefaultLayout>
     )

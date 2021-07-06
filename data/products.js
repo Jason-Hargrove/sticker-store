@@ -1,5 +1,7 @@
 // url to sticker video. Test images first: https://youtu.be/Oj9o9ZSrz_w
-const products = [
+app.get('/seed', async (req, res) => {
+  const newProducts =
+  [
   {
     name: "Table of Stickers",
     imageUrl:
@@ -65,4 +67,10 @@ const products = [
 },
 ];
 
-module.exports = products;
+try {
+  const seedItems = await Product.create(newProducts)
+  res.send(seedItems)
+} catch (err) {
+  res.send(err.message)
+}
+})
