@@ -66,6 +66,18 @@ const dataController = {
         next();
       }
     })
+  },
+  buy (req, res, next) {
+    Sticker.findByIdAndUpdate(req.params.id, { $inc: { countInStock: -1} }, (err, updatedQty) => {
+    if (err) {
+      res.status(404).send ({
+        msg: err.message
+      })
+    } else {
+      res.locals.data.countInStock = updatedQty
+      next()
+    }
+  })
   }
 }
 

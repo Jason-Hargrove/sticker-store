@@ -3,7 +3,7 @@ const products = [
   {
     name: "Table of Stickers",
     imageUrl:
-      "https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625010650132-76Q3JLL9AH23CQJ13F8U/table-of-stickers.jpg?format=1000w",
+      "https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625602265919-WM6DID24Z3NUIJCB445B/table-of-stickers.jpg?format=2500w",
     description:
       "Everyone wants a table full of stickers.",
     price: 200,
@@ -12,7 +12,7 @@ const products = [
   {
     name: "Radioactive Play",
     imageUrl:
-      "https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625010682145-MK7EOY0WVEHFB8M3B54L/radioactive-play.jpg?format=1000w",
+      "https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625602265869-LPADUW9PR60TLSBDEA3Z/radioactive-play.jpg?format=2500w",
     description:
       "Do your kids love to play with radioactive toys? Then they would love this sticker. Buy one today!",
     price: 20,
@@ -21,7 +21,7 @@ const products = [
   {
     name: "Radioactive Bath",
     imageUrl:
-      "https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625010691970-JHA2EFRTXT67EHYWZGD6/radioactive-bath.jpg?format=750w",
+      "https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625602265417-AXTLJ96NNDD1ZM1OX3HJ/radioactive-bath.jpg?format=2500w",
     description:
       "Clean water? Who needs that? Get glowing skin with our new and approved Radioactive Bath.",
     price: 20,
@@ -30,7 +30,7 @@ const products = [
   {
     name: "Contaminate St. Louis",
     imageUrl:
-      "https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625010699165-1T7GWONNU660B9U47NXB/contaminate-st-louis.png?format=750w",
+      "https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625602265382-P33ARSJHIWFHGAVUM9KE/contaminate-st-louis.jpg?format=2500w",
     description:
       "Do you live in St. Louis? Well, you don't have to live in St. Louis to be contaminated. Spread the love like all the other Superfund Sites in our country with theses stickers. By love, I mean radioactive contamination of course.",
     price: 5,
@@ -39,21 +39,30 @@ const products = [
   {
     name: "NEW Trefoil",
     imageUrl:
-      "https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625010704186-W831NRUYKS63MZ6P7JGZ/trifoil.jpg?format=750w",
+      "https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625602266845-EXNJ1LTXEYJSDLBX6EZ7/trifoil.jpg?format=2500w",
     description:
       "The Trefoil sticker has evolved. This is a pack of 10 sticker ready to slap.",
     price: 10,
     countInStock: 10,
   },
   {
-    name: "Trifoil Circle",
+    name: "Trefoil Circle",
     imageUrl:
-      "https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625010712684-092UY4LVNPV5QTTZRWQF/trefoil-circle.jpg?format=1000w",
+      "https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625602266324-WWQO575IBXBLL4AJ3CX0/trefoil-circle.jpg?format=2500w",
     description:
       "Need a certin sticker that will fit on that certin object in that certin place? Here it is!",
     price: 5,
     countInStock: 10,
   },
+  {
+  name: "Trefoil Table",
+  imageUrl:
+    "https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625602266427-5GFEHOKW7VYUOD3D0GIM/trefoil-table.jpg?format=2500w",
+  description:
+    "Just a bunch of stickers.",
+  price: 5,
+  countInStock: 10,
+},
 ];
 
 module.exports = products;

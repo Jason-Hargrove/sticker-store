@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Stickers New Page</title>
+  <link rel="stylesheet" href="../../css/app.css">
 </head>
 
 <body>
@@ -15,8 +16,8 @@
       <label>Image:</label> <input type="text" name="imageUrl" />
       <label>Name:</label> <input type="text" name="name" />
       <label>Description:</label> <input type="text" name="description" />
-      <label>Price:</label> <input type="number" name="price" />
-      <label>Count In Stock:</label> <input type="number" name="countInStock" />
+      <label>Price:</label> <input type="number" name="price" min="0"/>
+      <label>Count In Stock:</label> <input type="number" name="countInStock" min="0" />
       <label>Protective Coating:</label> <input type="checkbox" name="protectiveCoating" />
       <button type="submit" name="" value="Make It">Make</button>
 

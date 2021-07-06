@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 // ?_method at the end of a url.
 app.use(methodOverride('_method'));
 // Treats 'public' like the root.
-app.use(express.static('public'));
+app.use(express.static('public/'));
 // Will only run for /stickers. Go to routeController and do that stuff.
 app.use('/stickers', require('./controllers/routeController'));
 

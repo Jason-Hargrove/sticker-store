@@ -4,7 +4,26 @@ const DefaultLayout = require('./layouts/Default');
 class Show extends React.Component {
   render() {
 
+    const buyButton = () => {
+      if (sticker.countInStock > 0) {
+        return (
+          <>
+            <p>{sticker.countInStock}</p>
+            <form action={`/stickers/${sticker.id}/buy`}>
+            <input type="submit" value="BUY" />
+            </form>
+          </>
+        )
+      } else {
+        return (
+          <p>Not Currently Available</p>
+        )
+      }
+    }
+
+
     const sticker = this.props.sticker;
+
 
     return (
       <DefaultLayout title={"Is This Your Sticker?"}>
@@ -60,7 +79,9 @@ class Show extends React.Component {
 
                   </div>
 
-                  <button>Buy</button>
+                    <button className="buy-btn">
+                     {buyButton()}
+                    </button>
 
                 </div>
 

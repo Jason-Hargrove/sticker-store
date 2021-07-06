@@ -23,10 +23,11 @@ class Edit extends React.Component {
             <input type="text" name="descripton" defaultValue={this.props.sticker.descripton} />
 
             <lable>Price:</lable>
-            <input type="number" name="price" defaultValue={this.props.sticker.price} />
+            <input type="number" name="price" min="0"
+            defaultValue={this.props.sticker.price} />
 
             <lable>In Stock:</lable>
-            <input type="number" name="countInStock" defaultValue={this.props.sticker.countInStock} />
+            <input type="number" name="countInStock" min="0" defaultValue={this.props.sticker.countInStock} />
 
             <lable>Protective Coating</lable>
             { this.props.sticker.protectiveCoating
