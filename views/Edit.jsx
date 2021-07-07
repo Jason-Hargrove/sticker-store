@@ -20,7 +20,7 @@ class Edit extends React.Component {
             <input type="text" name="name" defaultValue={this.props.sticker.name} />
 
             <lable>Description:</lable>
-            <input type="text" name="descripton" defaultValue={this.props.sticker.descripton} />
+            <input type="text" name="description" defaultValue={this.props.sticker.description} />
 
             <lable>Price:</lable>
             <input type="number" name="price" min="0"

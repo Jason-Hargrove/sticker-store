@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 h1 {
   color: black;
 }
@@ -15,7 +19,8 @@ h1 {
 
 body {
   font-family: "Gill Sans", sans-serif;
-  background-color: rgba(255, 255, 126, 0.4);
+  background-image:
+                  url("https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625619974071-D1FWDBOAIEWAVQZ3G31H/yellow-cake-background.jpg?format=1500w");
   color: white;
 }
 
@@ -26,23 +31,26 @@ img {
 }
 
 .products {
-  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 75%;
   padding: 1rem;
   background-color: rgba(255,255,255, 1);
   box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
   margin: 8px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   filter: drop-shadow(0 0 0.75rem crimson);
 }
 
 .products__box {
-  margin: 8px auto;
+  margin: 1rem;
+  width: 20%;
+  height: 20%;
   border-style: solid;
+  border-color: red;
   border-width: 2px;
   border-radius: 8px;
-  border-color: red;
   background-color: purple;
   text-align: center;
 }
@@ -55,13 +63,27 @@ img {
   text-shadow: rgba(255, 255, 126, 0.6) 2px 0 10px;
 }
 
+.products__box > .product__info > .product__details {
+  text-align: left;
+  padding: 0 5px 0 5px;
+}
+
 .products__box > .product__info > .product__price {
-  margin: 3px 0 3px 0;
+  margin: 6px 0 6px 0;
   color: rgba(255, 255, 204, 1);
   background-color: red;
 }
 
-.products__box > .product__info > .product__stock > .product__count {
+.products__box > .product__info > .product__stockinstock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: baseline;
+  padding: 5px;
+}
+
+.products__box > .product__info > .product__stockinstock > .product__stock > .product__count {
   width: 30px;
   height: 30px;
   background: rgba(255, 255, 126, 1);
@@ -69,18 +91,42 @@ img {
   margin-left: 8px;
   color: rgba(154, 18, 179, 1);
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 1rem;
+  margin-right: 10px;
 }
 
-.product__details {
-  font-weight: bold;
+.products__box > .product__info > .product__coating {
+  text-align: center;
+  color: black;
+  margin: 4px 4px 6px 4px;
+  background-color: rgba(255, 255, 204, 0.9);
+  border-radius: 3px;
 }
 
+.nav__bottom {
+  background-color: yellow;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: red;
+  border-width: 2px;
+  width: 200px;
+  height: 50px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-/* ===== Edit Page ===== */
+}
+
+.product__add {
+  color: red;
+  margin-top: 15px;
+}
 
 
 

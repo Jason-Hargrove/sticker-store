@@ -50,7 +50,7 @@ class Show extends React.Component {
 
                     <label>Description:</label>
                       <div className="product__detials">
-                        {sticker.description}
+                        <h1>{sticker.description}</h1>
                       </div>
 
                     <label>Price:</label>

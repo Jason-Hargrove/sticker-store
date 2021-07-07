@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 body {
-  background-color: red;
+  font-family: "Gill Sans", sans-serif;
+  background-image:
+                  url("https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625619104439-N4LU05Z1JS07TTSDSLTK/project-2-background.jpg?format=2500w");
 }
