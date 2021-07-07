@@ -10,3 +10,73 @@ body {
   background-image:
                   url("https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625619104439-N4LU05Z1JS07TTSDSLTK/project-2-background.jpg?format=2500w");
 }
+
+h1 {
+  filter: drop-shadow(0 0 1rem crimson);
+}
+
+label {
+  color: white;
+  filter: drop-shadow(0 0 0.75rem crimson);
+  padding: 5px;
+}
+
+.wrapper {
+			display: grid;
+			grid-template-columns: 2fr 2fr 2fr;
+			grid-template-rows: 2fr 6fr 1fr;
+			grid-gap: 10px;
+			height: 550px;
+		}
+
+		header {
+			grid-column-start: 1;
+			grid-column-end: 4;
+		}
+
+		footer {
+			grid-column-start: 1;
+			grid-column-end: 4;
+		}
+
+		.wrapper * {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 1px;
+			margin-right: 1px;
+		}
+
+    .HEADER {
+      color: magenta;
+      background-color: rgba(255, 255, 126, 1);
+      filter: drop-shadow(0 0 0.75rem black);
+      box-shadow: inset 0 0 5px #000000;
+    }
+
+    .contents {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 20px;
+      background-color: rgba(154, 18, 179, 0.6);
+      border-radius: 5px;
+    }
+
+    .make__btn {
+      filter: drop-shadow(0 0 1rem crimson);
+      background-color: rgba(255, 255, 126, 1);
+      border: none;
+      color: magenta;
+      padding: 15px;
+      border-radius: 30px;
+      text-align: center;
+      font-size: 16px;
+      box-shadow: inset 0 0 5px #000000;
+    }
+
+    .make__btn:hover {
+      background-color: magenta;
+      color: yellow;
+    }

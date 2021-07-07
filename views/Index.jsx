@@ -8,7 +8,11 @@ class Index extends React.Component {
     const stickers = this.props.stickers;
 
     return (
-      <DefaultLayout title={"Radioactive Stickers"}>
+      <DefaultLayout>
+
+
+
+
 
         <div className="products">
           {
@@ -17,11 +21,23 @@ class Index extends React.Component {
 
                 <div className="products__box" key={sticker._id}>
 
-                  <div className="products__image">
-                    <a href={`/stickers/${sticker._id}`}>
-                      <img src={`${sticker.imageUrl}`} />
-                    </a>
+
+
+                  <div className="imageBox">
+
+                    <div className="imageInn">
+                        <img src={`${sticker.imageUrl}`} />
+                    </div>
+
+                    <div className="hoverImg">
+
+                      <a href={`/stickers/${sticker._id}`}><img src="https://images.squarespace-cdn.com/content/v1/57902faa59cc68a958c59c03/1625664782050-AW77UNJMCXLORA4AYEYP/click-to-buy.png?format=2500w"/></a>
+                      {/* <a href={`/stickers/${sticker._id}`}></a> */}
+                    </div>
+
                   </div>
+
+
 
                   <div className="product__info">
 
@@ -67,7 +83,7 @@ class Index extends React.Component {
         <nav>
           <div className="nav__bottom">
             <a href="/stickers/new">
-              <h3 className="nav__add">Add a Sticker</h3>
+              <h3 className="nav__text">Add a Sticker</h3>
             </a>
           </div>
         </nav>

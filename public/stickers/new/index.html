@@ -7,22 +7,28 @@
   <link rel="stylesheet" href="../../css/make.css">
 </head>
 
+
 <body>
-  <h1>Make a New Sticker page</h1>
   <!-- Note: action will be the route, method will be the HTTP verb -->
-  <div>
-    <form action="/stickers" method="POST">
-
-      <label>Image:</label> <input type="text" name="imageUrl" />
-      <label>Name:</label> <input type="text" name="name" />
-      <label>Description:</label> <input type="text" name="description" />
-      <label>Price:</label> <input type="number" name="price" min="0"/>
-      <label>Count In Stock:</label> <input type="number" name="countInStock" min="0" />
-      <label>Protective Coating:</label> <input type="checkbox" name="protectiveCoating" />
-      <button type="submit" name="" value="Make It">Make</button>
-
-
-    </form>
+    <div class="make">
+      <form action="/stickers" method="POST">
+        <div class="wrapper">
+          <header class="HEADER"><h1>Make a New Sticker</h1></header>
+          <nav class="items"></nav>
+          <div class="items contents">
+            <label class="make__img">Image:</label> <input type="text" name="imageUrl" />
+            <label class="make__name">Name:</label> <input type="text" name="name" />
+            <label class="make__description">Description:</label> <input type="text" name="description" />
+            <label class="make__price">Price:</label> <input type="number" name="price" min="0"/>
+            <label class="make__count">Count In Stock:</label> <input type="number" name="countInStock" min="0" />
+            <label class="make__coat">Protective Coating:</label> <input type="checkbox" name="protectiveCoating" />
+          </div>
+          <aside class="items"></aside>
+          <footer class="items">
+          <button class="make__btn" type="submit" name="" value="Make It">Make</button>
+          </footer>
+        </div>
+      </form>
   </div>
 </body>
 

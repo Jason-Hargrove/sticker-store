@@ -33,7 +33,7 @@ img {
 .products {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
   width: 75%;
   padding: 1rem;
@@ -45,8 +45,8 @@ img {
 
 .products__box {
   margin: 1rem;
-  width: 20%;
-  height: 20%;
+  max-width: 50px;
+  min-width: 200px;
   border-style: solid;
   border-color: red;
   border-width: 2px;
@@ -55,8 +55,22 @@ img {
   text-align: center;
 }
 
-/* Index only adjustment. */
+.imageBox {
+  position: relative;
+}
+
+.imageBox > .hoverImg {
+  position: absolute;
+  top: 0px;
+  display: none;
+}
+
+.imageBox:hover > .hoverImg {
+  display: block;
+}
+
 .products__box > .product__info > .product__name {
+  overflow: scroll;
   color: red;
   font-size: 1.75em;
   margin: 3px 0 3px 0;
@@ -104,31 +118,165 @@ img {
   text-align: center;
   color: black;
   margin: 4px 4px 6px 4px;
+  padding: 1px 3px 3px 3px;
   background-color: rgba(255, 255, 204, 0.9);
   border-radius: 3px;
 }
 
 .nav__bottom {
-  background-color: yellow;
+  background-color: rgba(255, 255, 126, 1);
   border-radius: 15px;
   border-style: solid;
   border-color: red;
   border-width: 2px;
-  width: 200px;
+  width: 160px;
   height: 50px;
   margin: 20px auto;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  box-shadow: inset 0 0 10px #000000;
 }
 
-.product__add {
-  color: red;
-  margin-top: 15px;
+div.nav__bottom > a > h3.nav__text {
+  color: purple;
+}
+
+.nav__bottom:hover {
+  background-color: purple;
+}
+
+div.nav__bottom > a > h3.nav__text:hover {
+  color: yellow;
 }
 
 
+/* ===== Nav bar stuff ===== */
+.navbar {
+  width: 100%;
+  height: 110px;
+  margin-bottom: 50px;
+  background-color: rgba(102, 51, 153, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  z-index: 50;
+}
+
+.navbar_logo h2 {
+  color: rgba(255, 255, 126, 1);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.navbar__links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar__links > li {
+  padding-left: 1.5rem;
+}
+
+/* Cart Items */
+.navbar__links > li > a {
+  text-decoration: none;
+  color: rgba(255, 255, 126, 1);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__links > li > a > span {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.cart__link {
+  background: rgba(154, 18, 179, 1);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.cart__link:hover {
+  background: rgba(255, 255, 126, 1);
+  color: rgba(154, 18, 179, 1);
+}
+
+.cartlogo__badge {
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 126, 1);
+  border-radius: 50%;
+  margin-left: 8px;
+  color: rgba(154, 18, 179, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.hamburger__menu {
+  width: 30px;
+  height: 30px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hamburger__menu > div {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 126, 1);
+}
+
+.hamburger__menu:hover > div {
+  background: rgba(154, 18, 179, 1);
+}
+
+/* ===== Media Queries ===== */
+/* To hide the Cart and Shop ".navbar__links when it gets small
+and show the hanburger. On mobile. */
+@media (max-width: 960px) {
+  .navbar__links {
+    display: none;
+  }
+  .hamburger__menu {
+    display: flex;
+  }
+
+  .products {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    width: 50%;
+    padding: 1rem;
+    background-color: rgba(255,255,255, 1);
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    margin: 8px auto;
+    filter: drop-shadow(0 0 0.75rem crimson);
+}
+
+/* To make the logo smaller for mobile. */
+@media (max-width: 500px) {
+  .navbar_logo h2 {
+    font-size: 1rem;
+  }
+}
+/* ===== End Navbar Stuff ===== */
+
+
+/* .product__add:hover {
+  background: rgba(255, 255, 126, 1);
+  color: rgba(154, 18, 179, 1);
+} */
 
 
 /* Colors to copy and paste:
