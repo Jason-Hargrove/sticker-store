@@ -7,29 +7,35 @@ class Edit extends React.Component {
     const sticker = this.props.sticker;
 
     return(
-      <DefaultLayout title="Edit Page">
+      <DefaultLayout>
+
+      <head>
+        <meta charSet="utf-8" />
+        <title>{this.props.title}</title>
+        <link rel="stylesheet" href="/css/edit.css" />
+      </head>
 
         <div className="products__box">
 
           <form method="POST" action={`/stickers/${this.props.sticker._id}?_method=PUT`}>
 
-            <lable>Image:</lable>
+            <label>Image:</label>
             <input type="text" name="imageUrl" defaultValue={this.props.sticker.imageUrl} />
 
-            <lable>Name:</lable>
+            <label>Name:</label>
             <input type="text" name="name" defaultValue={this.props.sticker.name} />
 
-            <lable>Description:</lable>
+            <label>Description:</label>
             <input type="text" name="description" defaultValue={this.props.sticker.description} />
 
-            <lable>Price:</lable>
+            <label>Price:</label>
             <input type="number" name="price" min="0"
             defaultValue={this.props.sticker.price} />
 
-            <lable>In Stock:</lable>
+            <label>In Stock:</label>
             <input type="number" name="countInStock" min="0" defaultValue={this.props.sticker.countInStock} />
 
-            <lable>Protective Coating</lable>
+            <label>Protective Coating</label>
             { this.props.sticker.protectiveCoating
               ? <input type="checkbox" name="protectiveCoating" defaultChecked />
               : <input type="checkbox" name="protectiveCoating"/>

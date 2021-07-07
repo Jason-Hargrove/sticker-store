@@ -26,7 +26,7 @@ class Show extends React.Component {
 
 
     return (
-      <DefaultLayout title={"Is This Your Sticker?"}>
+      <DefaultLayout>
 
       <head>
         <meta charSet="utf-8" />
@@ -43,56 +43,59 @@ class Show extends React.Component {
 
                   <div className="product__info">
 
-                    <label>Name:</label>
-                      <div className="product__detials">
+
+                      <div className="product__name">
                         {sticker.name}
                       </div>
 
-                    <label>Description:</label>
-                      <div className="product__detials">
-                        <h1>{sticker.description}</h1>
+                      <div className="product__details">
+                        {sticker.description}
                       </div>
 
-                    <label>Price:</label>
-                      <div className="product__detials">
+
+                      <div className="product__price">
                         {sticker.price}
                       </div>
 
-                    <label>In Stock:</label>
-                      <div className="product__detials">
-                        {sticker.countInStock}
+                      <div className="product__stockinstock">
+                      <div className="product__stock">
+                        <span className="product__count">{sticker.countInStock}</span>
+                      </div>
+                      <div className="product__instock">
+                        <label>In Stock</label>
+                      </div>
                       </div>
 
-                    <label>Protective Coating:</label>
-                      <div className="product__detials">
+                      <div className="product__coating">
                         {
                           sticker.protectiveCoating?
                           '  Protective Coating Applied':
                           '  No Protective Coating'
                         }
                       </div>
-
                   </div>
 
                   <div className="cardFunctions">
 
-                    <button>
+                    <button className="edit-btn">
                       <a href={`/stickers/${sticker._id}/edit`}>Edit</a>
                     </button>
 
                       <form method="POST" action={`/stickers/${sticker._id}?_method=DELETE`}>
-                        <button type="submit" value="DELETE">Delete</button>
+                        <button className="del-btn" type="submit" value="DELETE">Delete</button>
                       </form>
-
                   </div>
 
                     <button className="buy-btn">
                      {buyButton()}
                     </button>
 
+                  <div>
+                    <a className="nav__gallery" href={`/stickers/`}>Back to the Gallery</a>
+                  </div>
                 </div>
 
-          <a href={`/stickers/`}>Back to the Gallery</a>
+
 
       </DefaultLayout>
     )
