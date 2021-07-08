@@ -9,6 +9,10 @@ a:link {
   text-decoration: none;
 }
 
+a:hover {
+  background-color: red;
+}
+
 body {
   font-family: "Gill Sans", sans-serif;
   background-image:
