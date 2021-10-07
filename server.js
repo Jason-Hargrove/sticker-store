@@ -3,8 +3,10 @@ const express = require('express');
 const methodOverride = require('method-override');
 const app = express();
 const PORT = process.env.PORT || 3000;
+
 // ===== Authentication =====
 const { hash, register } = require('./controllers/auth');
+
 // ===== Setup Data =====
 const db = require('./models/db');
 db.once('connected', () => {
@@ -28,6 +30,7 @@ app.use(methodOverride('_method'));
 app.use(express.static('public/'));
 // Will only run for /stickers. Go to routeController and do that stuff.
 app.use('/stickers', require('./controllers/routeController'));
+
 // ===== Authentication =====
 app.post('/register', register)
 

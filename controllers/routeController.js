@@ -1,8 +1,11 @@
+// require('dotenv').config(); // for Auth...maybe?
 const express = require('express');
 // establish router middleware. ability to .post .delete etc...
 const router = express.Router();
 const viewController = require('./viewController');
 const dataController = require('./dataController');
+// ===== Authentication =====
+// const { hash, register } = require('./auth');
 
 // Index
 router.get('/', dataController.index, viewController.index)
@@ -13,6 +16,10 @@ router.delete('/:id', dataController.destroy, viewController.redirectHome)
 router.put('/:id', dataController.update, viewController.redirectShow)
 // Create
 router.post('/', dataController.create, viewController.redirectHome)
+
+// ===== Authentication =====
+// router.post('/register', register)
+
 // Edit
 router.get('/:id/edit', dataController.show, viewController.edit)
 // Show

@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs'); // Had to install.
 const crypto = require('crypto'); // Comes with node.js.
 const jwt = require('jsonwebtoken'); // Had to install.
 const User = require('../models/user.js')
-
+const SECRET = process.env.SECRET;
 
 // Hashing function.
 const hash = (password) => {
@@ -14,7 +14,7 @@ const hash = (password) => {
               .split('')
               .reverse()
               .join('j')
-  return crypto.createHmac('sha256', proess.env.SECRET)
+  return crypto.createHmac('sha256', process.env.SECRET)
               .update(levelOne)
               .digest('hex')
               .split('')
@@ -27,11 +27,11 @@ module.exports.hash = hash
 
 // Register Users.
 const registerService = async (req, res) => {
-  console.log(req.body)
+  console.log("Before everything:", req.body)
   const hashedPassword = hash(req.body.password)
   console.log('hashedPassword:', hashedPassword)
   req.body.password = bcrypt.hashSync(hashedPassword, bcrypt.genSaltSync(10))
-  console.log(req.body)
+  console.log("After salt:", req.body)
 
   try {
     // Create user.
