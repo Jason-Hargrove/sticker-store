@@ -10,10 +10,6 @@ class Index extends React.Component {
     return (
       <DefaultLayout>
 
-
-
-
-
         <div className="products">
           {
             stickers.map((sticker, i) => {
