@@ -5,7 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ===== Authentication =====
-const { hash, register } = require('./controllers/auth');
+const { hash, register, login } = require('./controllers/auth');
 
 // ===== Setup Data =====
 const db = require('./models/db');
@@ -34,7 +34,9 @@ app.use(express.static('public'));
 app.use('/stickers', require('./controllers/routeController'));
 
 // ===== Authentication =====
+app.post('/login', login)
 app.post('/register', register)
+app.use('/register', require('./controllers/userController'));
 
 app.listen(PORT, () => {
   console.log('We\'re listening on PORT', PORT)
