@@ -3,7 +3,7 @@ require('dotenv').config()
 const bcrypt = require('bcryptjs'); // Had to install.
 const crypto = require('crypto'); // Comes with node.js.
 const jwt = require('jsonwebtoken'); // Had to install.
-const User = require('../models/user.js')
+const User = require('../models/user')
 const SECRET = process.env.SECRET;
 
 // Hashing function.
