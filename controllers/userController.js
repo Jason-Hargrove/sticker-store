@@ -1,7 +1,9 @@
 const User = require('../models/user');
 const userRouter = require('express').Router();
 
+// Crud without create.
 // Create route is in server.js
+// Read, Update, Destroy.
 
 // Read (Show)
 userRouter.get('/', async (req, res) => {
