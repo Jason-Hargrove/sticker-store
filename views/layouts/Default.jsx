@@ -23,6 +23,15 @@ class DefaultLayout extends React.Component {
                 {/* ===== Links ===== */}
                 <ul className="navbar__links">
                   <li>
+                  <nav>
+                    <div className="nav__bottom">
+                      <a href="/stickers/login-page">
+                        <h3 className="nav__text">Sign In</h3>
+                      </a>
+                    </div>
+                  </nav>
+                  </li>
+                  <li>
                     <a href="">
                       {/* Shopping Cart Icon. Font Awesome. */}
                       <i className="fas fa-shopping-cart"></i>
