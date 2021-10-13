@@ -26,3 +26,11 @@ body {
 .logo > img {
   width: 90%;
 }
+
+div.logo > a > div.logo > h1:hover {
+  font-weight: 900;
+}
+
+div.logo > p {
+  margin: 1em 0;
+}

@@ -25,7 +25,7 @@ class DefaultLayout extends React.Component {
                   <li>
                   <nav>
                     <div className="nav__bottom">
-                      <a href="/stickers/login-page">
+                      <a href="/stickers/login">
                         <h3 className="nav__text">Sign In</h3>
                       </a>
                     </div>

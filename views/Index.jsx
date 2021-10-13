@@ -2,8 +2,8 @@ const React = require('react');
 const DefaultLayout = require('./layouts/Default');
 
 class Index extends React.Component {
-
   render() {
+
     const stickers = this.props.stickers;
 
     return (
@@ -71,7 +71,6 @@ class Index extends React.Component {
             </a>
           </div>
         </nav>
-
       </DefaultLayout>
     )
   }

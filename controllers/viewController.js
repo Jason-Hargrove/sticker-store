@@ -15,6 +15,9 @@ const viewController = {
   },
   redirectShow (req, res, next) {
     res.redirect(RESOURCE_PATH + `/${req.params.id}`)
+  },
+  login (req, res) {
+    res.render('Login')
   }
 }
 

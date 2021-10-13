@@ -1,4 +1,3 @@
-// url to sticker video. Test images first: https://youtu.be/Oj9o9ZSrz_w
 app.get('/seed', async (req, res) => {
   const newProducts =
   [
@@ -69,8 +68,8 @@ app.get('/seed', async (req, res) => {
 
 try {
   const seedItems = await Product.create(newProducts)
-  res.send(seedItems)
+    res.send(seedItems)
 } catch (err) {
-  res.send(err.message)
+    res.send(err.message)
 }
 })

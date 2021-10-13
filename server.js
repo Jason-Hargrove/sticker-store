@@ -36,7 +36,7 @@ app.use('/stickers', require('./controllers/routeController'));
 // ===== Authentication =====
 app.post('/login', login)
 app.post('/register', register)
-app.use('/register', require('./controllers/userController'));
+// app.use('/register', require('./controllers/userController'));
 
 app.listen(PORT, () => {
   console.log('We\'re listening on PORT', PORT)
